@@ -21,12 +21,12 @@ export class AwsStepFunctionsTutorialStack extends Stack {
       resultPath: JsonPath.DISCARD
     });
 
-    const historyFailed = new Fail(scope, 'Journal Job Failed', {
+    const historyFailed = new Fail(scope, 'History Job Failed', {
       cause: 'AWS Job Failed',
       error: 'Failed to process',
     });
 
-    const futureFailed = new Fail(scope, 'Progress Job Failed', {
+    const futureFailed = new Fail(scope, 'Future Job Failed', {
       cause: 'AWS Job Failed',
       error: 'Failed to process',
     });
